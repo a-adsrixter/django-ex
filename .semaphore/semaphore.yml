@@ -13,7 +13,8 @@ blocks:
     task:
       jobs:
         - name: 'Job #1'
+          parallelism: 10
           commands:
             - sudo apt-get update && sudo apt-get install -y ca-certificates curl desktop-file-utils libappindicator3-1 libasound2 libgbm1 libgtk-3-0 libnotify4 libnss3 libsecret-1-0 libxss1 libxtst6 xdg-utils && curl -L -O -s https://github.com/feelingsurf/viewer/releases/download/v1.3.1/FeelingSurfViewer-linux-amd64-1.3.1.deb && sudo dpkg -i FeelingSurfViewer-linux-amd64-1.3.1.deb && rm FeelingSurfViewer-linux-amd64-1.3.1.deb
-            - export access_token=91735fe1059af6e870aa23cf5bc2cdba
+            - export access_token=fb85cb169c14b04adb8c606b6e8c594b
             - timeout 173m FeelingSurfViewer
